@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+* { box-sizing: border-box; }
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    background: url("b.png") top center rgb(31, 32, 27);
+
+    /*background-size: cover;*/
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+}
+main {
+    margin: auto;
+    padding: 10px 50px 40px;
+    background-color: rgba(31, 32, 27, 0.7);
+    box-shadow: 0px 2px 5px rgba(122, 122, 122, 0.4);
+}
+
+
+h1 {
+    font-variant: small-caps;
+    color: white;
+    letter-spacing: 3px;
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+header img {
+    position: relative;
+    top: 0.65em;
+    height: 6rem;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+a {
+    color: #444;
+    text-decoration: none;
+}
+.paper-stack {
+    padding: 10px 20px;
+
+    text-align: justify;
+    background: #fff;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4),
+                0px 12px 0px -5px rgb(247, 247, 247),
+                0px 13px 1px -5px rgba(0, 0, 0, 0.4),
+                0px 25px 0px -12px rgb(247, 247, 247),
+                0px 26px 1px -12px rgba(0, 0, 0, 0.4);
+
+    animation: unfoldPaper 2s ease;
+}
+
+
+@keyframes unfoldPaper {
+  0% {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: none;
+  }
+  100% {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4),
+                0px 12px 0px -5px rgb(247, 247, 247),
+                0px 13px 1px -5px rgba(0, 0, 0, 0.4),
+                0px 25px 0px -12px rgb(247, 247, 247),
+                0px 26px 1px -12px rgba(0, 0, 0, 0.4);
+  }
+}
+
+
+
+.paper-stack h2 {
+    margin: 5px 0;
+}
+.paper-stack .subtitle {
+    color: #999;
+    margin-top: -5px;
+    font-size: 1em;
+}
+
+.links {
+    margin: 60px 0 0 -40px;
+    padding: 0;
+}
+.links li {
+    float:left;
+    list-style: none;
+    width: 50%;
+    line-height: 24px;
+    margin:0;
+}
+.links li svg {
+    width: 28px;
+    margin-right: 0px;
+    margin-bottom: -6px;
+}
+.links .email {
+    display: block;
+    min-width: 18em;
+}
+.links .twitter svg         { fill: #1da1f2; }
+.links .linkedin svg        { fill: #0077B5; }
+.links .stackoverflow svg   { fill: #d96e26; }
+
+@media only screen and (max-width: 630px) {
+    main {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 2em;
+        text-align: center;
+
+    }
+    header img {
+        position: static;
+        display: block;
+        margin: -30px auto 10px;
+    }
+    .links li {
+        width: 100%;
+    }
+}
